@@ -1,0 +1,75 @@
+﻿@model finalProject.Models.Device
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Device</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.deviceName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.deviceName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.deviceOwner)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.deviceOwner)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.deviceIP)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.deviceIP)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.deviceMACaddress)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.deviceMACaddress)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.deviceCPUmodel)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.deviceCPUmodel)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.deviceCPUspeed)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.deviceCPUspeed)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.deviceRAM)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.deviceRAM)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.deviceDisk)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.deviceDisk)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.deviceSituation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.deviceSituation)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="deviceID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

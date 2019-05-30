@@ -1,0 +1,67 @@
+﻿@model IEnumerable<finalProject.Models.User>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<section class="content-header">
+    <h1>
+        Kullanıcılar
+        <small>Yeni kullanıcı ekle</small>
+    </h1>
+</section>
+<!-- Main content -->
+<section class="content container-fluid">
+    <p>
+        <a asp-action="Create" class="btn btn-default">Yeni Kullanıcı</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.userName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.userSurname)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.userEmail)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.userPassword)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.userRole)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.userName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.userSurname)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.userEmail)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.userPassword)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.userRole)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.userID" class="btn btn-default">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.userID" class="btn btn-default">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.userID" class="btn btn-default">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</section>

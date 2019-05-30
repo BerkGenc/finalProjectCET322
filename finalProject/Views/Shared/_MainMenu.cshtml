@@ -1,0 +1,23 @@
+﻿<ul class="sidebar-menu" data-widget="tree">
+    <li class="header">ANA MENU</li>
+    <!-- Optionally, you can add icons to the links -->
+
+
+    <li> <a asp-area="" asp-controller="Home" asp-action="Index">Anasayfa</a></a></li>
+    <li> <a asp-area="" asp-controller="Home" asp-action="Cihazlar">Cihazlar</a></a></li>
+    <li class="treeview">
+        <a href="#">
+            <i class="fa fa-link"></i> <span>Cihazları Yönet</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+            </span>
+        </a>
+        <ul class="treeview-menu">
+            <li><a asp-area="" asp-controller="Devices" asp-action="Index">Cihazlar</a></li>
+            <li><a asp-area="" asp-controller="Devices" asp-action="Create">Cihaz Ekle</a></li>
+        </ul>
+    </li>
+    <li> <a asp-area="" asp-controller="Home" asp-action="Iletisim">İletişim</a></a></li>
+    <li> <a asp-area="" asp-controller="Users" asp-action="Index">Kullanıcılar</a></a></li>
+    <li> <a asp-area="" asp-controller="Login" asp-action="login">Çıkış</a></a></li>
+</ul>

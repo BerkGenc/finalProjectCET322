@@ -1,0 +1,75 @@
+﻿@model finalProject.Models.Device
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<section class="content-header">
+    <h1>
+        Cihaz Ekle
+        <small>Sisteme yeni cihaz ekle.</small>
+    </h1>
+</section>
+<!-- Main content -->
+<section class="content container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="deviceName" class="control-label"></label>
+                    <input asp-for="deviceName" class="form-control" />
+                    <span asp-validation-for="deviceName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="deviceOwner" class="control-label"></label>
+                    <input asp-for="deviceOwner" class="form-control" />
+                    <span asp-validation-for="deviceOwner" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="deviceIP" class="control-label"></label>
+                    <input asp-for="deviceIP" class="form-control" />
+                    <span asp-validation-for="deviceIP" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="deviceMACaddress" class="control-label"></label>
+                    <input asp-for="deviceMACaddress" class="form-control" />
+                    <span asp-validation-for="deviceMACaddress" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="deviceCPUmodel" class="control-label"></label>
+                    <input asp-for="deviceCPUmodel" class="form-control" />
+                    <span asp-validation-for="deviceCPUmodel" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="deviceCPUspeed" class="control-label"></label>
+                    <input asp-for="deviceCPUspeed" class="form-control" />
+                    <span asp-validation-for="deviceCPUspeed" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="deviceRAM" class="control-label"></label>
+                    <input asp-for="deviceRAM" class="form-control" />
+                    <span asp-validation-for="deviceRAM" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="deviceDisk" class="control-label"></label>
+                    <input asp-for="deviceDisk" class="form-control" />
+                    <span asp-validation-for="deviceDisk" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="deviceSituation" class="control-label"></label>
+                    <input asp-for="deviceSituation" class="form-control" />
+                    <span asp-validation-for="deviceSituation" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+
+
+

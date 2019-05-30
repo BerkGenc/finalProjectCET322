@@ -1,0 +1,97 @@
+﻿@model IEnumerable<finalProject.Models.Device>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<section class="content-header">
+    <h1>
+        Cihazlar
+        <small>Cihazlarınızı yönetin.</small>
+    </h1>
+</section>
+<!-- Main content -->
+<section class="content container-fluid">
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.deviceName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.deviceOwner)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.deviceIP)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.deviceMACaddress)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.deviceCPUmodel)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.deviceCPUspeed)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.deviceRAM)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.deviceDisk)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.deviceSituation)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.deviceName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.deviceOwner)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.deviceIP)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.deviceMACaddress)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.deviceCPUmodel)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.deviceCPUspeed)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.deviceRAM)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.deviceDisk)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.deviceSituation)
+                    </td>
+                    <td>
+                       
+                        <a asp-action="Edit" asp-route-id="@item.deviceID" class="btn btn-default">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.deviceID" class="btn btn-default">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.deviceID" class="btn btn-default">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</section>
+
+
+
+
+

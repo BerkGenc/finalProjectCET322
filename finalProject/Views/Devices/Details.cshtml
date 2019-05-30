@@ -1,0 +1,91 @@
+﻿@model finalProject.Models.Device
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<section class="content-header">
+    <h1>
+        Cihaz Detayı
+        <small>Cihaz detaylı incele!</small>
+    </h1>
+</section>
+<!-- Main content -->
+<section class="content container-fluid">
+    <h2>Detaylar</h2>
+
+    <div>
+        <h4>Device</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.deviceName)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.deviceName)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.deviceOwner)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.deviceOwner)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.deviceIP)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.deviceIP)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.deviceMACaddress)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.deviceMACaddress)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.deviceCPUmodel)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.deviceCPUmodel)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.deviceCPUspeed)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.deviceCPUspeed)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.deviceRAM)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.deviceRAM)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.deviceDisk)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.deviceDisk)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.deviceSituation)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.deviceSituation)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.deviceID" class="btn btn-default">Edit</a> |
+        <a asp-action="Index" class="btn btn-default">Back to List</a>
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
